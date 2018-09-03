@@ -230,7 +230,7 @@ class GameScene extends Phaser.Scene {
         //    fire.update(time, delta);
         //})
         Array.from(this.fireballs.children.entries).forEach(
-            (fireball) => 
+            (fireball) =>
             {fireball.update(time, delta);
         });
 
@@ -243,7 +243,7 @@ class GameScene extends Phaser.Scene {
             if (this.mario.y > 240 || (this.attractMode.recording.length <= this.attractMode.current + 2) || this.attractMode.current === 14000) {
                 this.attractMode.current = 0;
                 this.attractMode.time = 0;
-                this.mario.x = 16 * 6; // 3500, 
+                this.mario.x = 16 * 6; // 3500,
                 this.tick = 0;
                 this.registry.set('restartScene', true);
 
@@ -543,7 +543,7 @@ class GameScene extends Phaser.Scene {
     }
 
     parseObjectLayers() {
-        // The map has one object layer with enemies as stamped tiles, 
+        // The map has one object layer with enemies as stamped tiles,
         // each tile has properties containing info on what enemy it represents.
         this.map.getObjectLayer('enemies').objects.forEach(
             (enemy) => {
@@ -613,7 +613,7 @@ class GameScene extends Phaser.Scene {
                     };
                     break;
                 case 'room':
-                    // Adds a 'room' that is just info on bounds so that we can add sections below pipes 
+                    // Adds a 'room' that is just info on bounds so that we can add sections below pipes
                     // in an level just using one tilemap.
                     this.rooms.push({
                         x: modifier.x,
