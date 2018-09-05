@@ -5,7 +5,7 @@ import TitleScene from './scenes/TitleScene';
 
 const config = {
     // For more settings see <https://github.com/photonstorm/phaser/blob/master/src/boot/Config.js>
-    type: Phaser.AUTO,
+    type: Phaser.Canvas,
     pixelArt: true,
     roundPixels: true,
     width: 640,
@@ -20,7 +20,6 @@ const config = {
     },
     scene: [
         BootScene,
-        TitleScene,
         FishScene
     ]
 };

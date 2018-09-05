@@ -16,7 +16,7 @@ class BootScene extends Phaser.Scene {
     }
     preload() {
         const progress = this.add.graphics();
-        console.log(this)
+
         // Register a load progress event to show a load bar
         this.load.on('progress', (value) => {
             progress.clear();
@@ -46,6 +46,7 @@ class BootScene extends Phaser.Scene {
         this.load.image('panel_bet',url+'panel_bet.png')
         this.load.image('panel_wooden',url+"panel_wooden.png")
         this.load.image("bet_pop",url+"bet_pop.png")
+        this.load.image("coin",url+"coin.png")
         this.load.spritesheet('btn-throw', url + 'btn_throw.png',{
             frameWidth:180,
             startFrame:0,endFrame:182*2
@@ -54,7 +55,27 @@ class BootScene extends Phaser.Scene {
         for (let i = 0,len = FishFrameConfig.length; i < len; i++){
             this.load.spritesheet(`f${i+1}`,url+`f${i+1}.png`,FishFrameConfig[i]);
         }
-
+        //part2
+        this.load.spritesheet("box",url+"box.png",{
+            frameWidth:196,
+            startFrame:0,endFrame:196*2
+        })
+        this.load.image("box_add_coin",url+"box_add_coin.png")
+        this.load.image("box_frame",url+"box_frame.png")
+        this.load.image("btn_big",url+"box_great_btn.png")
+        this.load.image("btn_bg",url+"box_guess_panel.png")
+        this.load.image("btn_less",url+"box_less_btn.png")
+        this.load.image("box_quit_btn",url+"box_quit_btn.png")
+        this.load.image("box_quit_frame",url+"box_quit_frame.png")
+        this.load.image("confirm_btn",url+"confirm_btn.png")
+        this.load.image("continue_btn",url+"continue_btn.png")
+        this.load.image("rule_btn",url+"box_rule.png")
+        this.load.image("pearl",url+"pearl.png")
+        this.load.image("message",url+"message.png")
+        this.load.spritesheet("star",url+"star.png",{
+            frameWidth:35,
+            startFrame:0,endFrame:35*2
+        })
         // this.load.image('background-clouds', 'assets/images/clouds.png'); // 16-bit later
 
         // // Tilemap with a lot of objects and tile-properties tricks
